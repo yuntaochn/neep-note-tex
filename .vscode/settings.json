@@ -1,0 +1,111 @@
+{
+    "latex-workshop.bibtex-format.tab": "4 spaces",
+    "latex-workshop.intellisense.package.enabled": true,    
+    // 根据加载的包，自动完成命令或包
+    "latex-workshop.showContextMenu": true,
+    // 右键菜单
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+                // 将DOC改为DOCFILE可以支持编译中文路径下的文件
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+            // 第一个recipe为默认的编译工具
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ],
+        },
+        {
+            "name": "xe-bib-xe-xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf-bib-pdf-pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex",
+            ],
+        },
+        // {
+        //     "name": "latexmk 🔃",
+        //     "tools": [
+        //         "latexmk"
+        //     ]
+        // },
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    // 配置正向和反向搜索
+    // "latex-workshop.view.pdf.external.synctex.command": ""
+    // "latex-workshop.view.pdf.viewer": "external"
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.synctex.gz"
+    ],
+
+}

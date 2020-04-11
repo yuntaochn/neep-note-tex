@@ -1,0 +1,57 @@
+%!TEX program = xelatex
+\documentclass{book}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+\usepackage{ctex}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} %改为0pt即可去掉页眉下面的横线
+\lfoot{} %这条语句可以让页码出现在下方
+\usepackage{float}
+\begin{titlepage}
+	\title{考研笔记}
+	\author{张云涛}
+\end{titlepage}
+
+\begin{document}
+\maketitle
+
+\part{数学}
+\include{math/函数极限连续}
+\include{math/一元微分}
+\include{math/一元积分}
+\include{math/多元微分}
+\include{math/多元积分}
+\include{math/空间几何}
+\include{math/微分方程}
+\include{math/无穷级数}
+\include{math/矩阵}
+\include{math/线性方程组}
+\include{math/特征值特征向量}
+\include{math/二次型}
+\include{math/随机变量及分布}
+\include{math/多维随机变量与分布}
+\include{math/数字特征}
+\include{math/大数定律中心极限定理}
+\include{math/数理统计}
+\include{math/参数估计假设检验}
+
+
+\part{计算机}
+\include{cs/线性表}
+\include{cs/栈和队列}
+\include{cs/树和二叉树}
+\include{cs/图}
+\include{cs/查找}
+\include{cs/排序}
+\include{cs/进程管理}
+\include{cs/内存管理}
+\include{cs/文件管理}
+\include{cs/IO管理}
+\include{cs/物理层}
+\include{cs/数据链路层}
+\include{cs/网络层}
+\include{cs/传输层}
+\include{cs/应用层}
+
+
+\end{document}
