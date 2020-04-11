@@ -2,11 +2,15 @@
 \documentclass{book}
 \usepackage[a4paper,left=3cm,right=3cm]{geometry}
 \usepackage{ctex}
+\usepackage{graphics}
 \usepackage{fancyhdr}
+\usepackage{float} 
+\lfoot{} 
+	% 这条语句可以让页码出现在下方  
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt} %改为0pt即可去掉页眉下面的横线
-\lfoot{} %这条语句可以让页码出现在下方
-\usepackage{float}
+\renewcommand{\headrulewidth}{0pt} 
+	% 改为0pt即可去掉页眉下面的横线
+
 \begin{titlepage}
 	\title{考研笔记}
 	\author{张云涛}
@@ -14,6 +18,12 @@
 
 \begin{document}
 \maketitle
+
+\part{政治}
+\include{politics/马原}
+
+\part{英语}
+\include{english/作文}
 
 \part{数学}
 \include{math/函数极限连续}
