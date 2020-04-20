@@ -4,8 +4,9 @@
 \usepackage{ctex}
 \usepackage{graphics}
 \usepackage{graphicx}
+\usepackage{multirow}
 \usepackage{fancyhdr}
-\usepackage{float} 
+\usepackage{float}  % 避免浮动
 \lfoot{} 
 	% 这条语句可以让页码出现在下方  
 \pagestyle{fancy}
@@ -14,6 +15,13 @@
 \usepackage{verbatim}
 
 \usepackage{listings}	% 代码相关
+\lstset{
+	frame = shadowbox,
+	numbers = left,
+	numberstype = \tiny,
+	tabsize = 4, 
+	breaklines = true,
+}
 
 \begin{titlepage}
 	\title{考研笔记}
