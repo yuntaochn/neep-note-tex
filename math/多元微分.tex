@@ -1,1 +1,65 @@
-\chapter*{多元微分}
+\chapter{多元微分}
+
+
+多元微分的题型
+
+\section{概念}
+各种术语的概念，及公式。
+
+\noindent
+偏导数连续 $\Longrightarrow$ 可微 $\Longrightarrow$ 偏导数存在(某方向双侧) \\
+偏导数连续 $\Longrightarrow$ 可微 $\Longrightarrow$ 连续 $\Longrightarrow$ 极限存在(全方向) \\
+偏导数存在 $\Longrightarrow$ 可微 $\Longrightarrow$ 方向导数存在(某方向单侧) \\
+
+注
+不能用洛必达法则、单调有界准则 \\
+$dz = A\Delta x + B\Delta y + o(\rho)$ \\
+$dz = A\Delta x + B\Delta y + o(\sqrt{x^2+y^2})$ \\
+
+
+驻点
+
+\section{复合函数求导}
+求导方法
+1. 链式求导法则 \\ 
+2. 全导数 \\
+3. 全微分形式不变性 \\
+
+
+
+\section{隐函数求导}
+一个方程的情形
+
+方程组的情形
+雅克比矩阵，公式法 
+
+方程组简单情形
+
+
+
+\section{多元函数的极值、最值}
+题型包括条件极值和无条件极值
+
+\subsection{无条件极值}
+求解步骤
+1. 令偏导数=0， 求得(x,y)
+2. 求二阶偏导数
+$$
+A = f_{11}^{''} \quad{}  B = f_{12}^{''} \quad{} C = f_{22}^{''}
+$$
+其中若$B^2 - AC < 0$，极值存在，
+若$A > 0$，则为极小值，若$A < 0$，则为极大值，
+若$A = 0$，则失效，另外计算。
+
+
+\subsection{条件极值}
+运用拉格朗日乘数法，构造
+$F(x, y, z, \lambda, \mu) = 0$ \\
+分别求偏导数，令其=0， 求得$(x, y, z)$。
+优先求$(x, y, z)$。 
+
+\section{偏微分方程}
+
+$z(x,y) = \int f_x^{'}(x,y) dx + \varphi(y)$ \\
+代入已知条件求得$\varphi(y)$ \\
+求得$z(x,y)$ \\
