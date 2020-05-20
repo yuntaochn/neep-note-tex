@@ -15,17 +15,59 @@
 \usepackage{verbatim}
 
 \usepackage{listings}	% 代码相关
-\lstset{
-	frame = shadowbox,
-	numbers = left,
-	numberstyle = \tiny,
-	tabsize = 4, 
-	breaklines = true,
+\usepackage{xcolor}
+
+% \lstdefinestyle{lcustom} {
+% 	frame = shadowbox,
+% 	numbers = left,
+% 	numberstyle = \tiny,
+% 	tabsize = 4, 
+% 	breaklines = true,
+% }
+
+\lstdefinestyle{lfonts}{
+	basicstyle   = \scriptsize\ttfamily,
+	stringstyle  = \color{purple},
+	keywordstyle = \color{blue!60!black}\bfseries,
+	commentstyle = \color{olive}\scshape,
 }
+\lstdefinestyle{lnumbers}{
+	numbers     = left,
+	numberstyle = \tiny,
+	numbersep   = 1em,
+	firstnumber = 1,
+	stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+	breaklines       = true,
+	tabsize          = 4,
+	columns          = spacefixed,
+}
+\lstdefinestyle{lgeometry}{
+	xleftmargin      = 20pt,
+	xrightmargin     = 0pt,
+	frame            = tb,
+	framesep         = \fboxsep,
+	framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+	style = lfonts,
+	style = lnumbers,
+	style = llayout,
+	style = lgeometry,
+}
+% \lstset{language = Python, style = lgeneral}
+\lstset{style = lgeneral}
 
 \usepackage{tikz}
 \usetikzlibrary{mindmap}
 \pagestyle{empty}
+
+\usepackage{markdown}
+\markdownSetup{smartEllipses = true}
+\markdownSetup{hashEnumerators = true}
+\markdownSetup{inlineFootnotes = true}
+\markdownSetup{fencedCode = true}
 
 \begin{titlepage}
 	\title{考研笔记}
@@ -36,6 +78,15 @@
 \maketitle
 
 \tableofcontents
+
+
+\begin{markdown}
+## 你好
+
+> 幸福 
+> 你好 
+
+\end{markdown}
 
 \part{政治}
 \include{politics/马原}
@@ -83,6 +134,7 @@
 \include{cs/网络层}
 \include{cs/传输层}
 \include{cs/应用层}
+\include{cs/md/TCP-IP}
 
 
 \end{document}
