@@ -275,3 +275,8 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+
+_markdown_main/
+
+
